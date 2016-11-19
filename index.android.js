@@ -27,13 +27,17 @@ class Fretboard extends Component {
     while (i<12) {
       frets.push((
         <View style={{ flexDirection: 'row' }} key={'fret' + i.toString()}>
-        <View style={{ flex:1 }}>
-        </View>
-        <View style={stylesApp.fret}>
-        <Text>{i}</Text>
-        </View>
-        <View style={{ flex:1 }}>
-        </View>
+
+          <View style={{ flex:1 }}></View>
+
+          <View style={stylesApp.fret}>
+
+            <Text>{i}</Text>
+
+          </View>
+
+          <View style={{ flex:1 }}></View>
+
         </View>));
 
       i = i + 1;
@@ -44,32 +48,37 @@ class Fretboard extends Component {
       backgroundColor="black"
       contentBackgroundColor="black"
       parallaxHeaderHeight={400}
+
       renderForeground={() => (
        <View style={stylesApp.headView}>
 
-       <View></View>
-        <Image style={stylesApp.headBackground} source={ require('./assets/head.png') }/>
-        <View>
+        <View></View>
 
-        </View>
+        <Image style={stylesApp.headBackground} source={ require('./assets/head.png') }/>
+
+        <View></View>
+
        </View>
       )}>
+
       <View style={{ height: 1252, alignItems : 'center' }}>
 
           <View style={{ flexDirection: 'row' }}>
-            <View>
 
-            </View>
+            <View></View>
+
             <Image style={stylesApp.airFret} source={ require('./assets/brigde.png') }/>
-            <View>
 
-            </View>
+            <View></View>
+
           </View>
 
           {frets}
 
       </View>
+
     </ParallaxScrollView>
+
     )
   }
 }
@@ -83,24 +92,25 @@ export default class Refarmony extends Component {
       <View style={stylesBack.bigContainer}>
 
         <View style={stylesBack.headContainer}>
+
           <Text style={stylesBack.titled}>
             este es el titulo!
           </Text>
+
         </View>
 
         <View style={stylesBack.fretboardContainer}>
 
-
-        <Fretboard>
-        </Fretboard>
-
+        <Fretboard></Fretboard>
 
         </View>
 
         <View style={stylesBack.footContainer}>
+
           <Text style={stylesBack.footed}>
             Este texto abajo!
           </Text>
+          
         </View>
 
       </View>
